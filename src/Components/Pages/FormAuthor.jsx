@@ -15,7 +15,7 @@ const FormAuthor = () => {
     const avatarFile = new FormData()
     avatarFile.append('avatar', file)
     try {
-        const response = await fetch(`${REACT_APP_SERVER_BASE_URL}/register/avatarCloud`, {
+        const response = await fetch(`${process.env.REACT_APP_SERVER_BASE_URL}/register/avatarCloud`, {
             method: "POST",
             body: avatarFile
         })
@@ -35,7 +35,7 @@ const FormAuthor = () => {
                 ...formData,
                 avatar: uploadAvatarImage.avatar
             }
-            const response = await fetch(`${REACT_APP_SERVER_BASE_URL}/register/authors`, {
+            const response = await fetch(`${process.env.REACT_APP_SERVER_BASE_URL}/register/authors`, {
                 method: "POST",
                 body: JSON.stringify(formDataWithAvatar),
                 headers: {"Content-Type":"application/json"}

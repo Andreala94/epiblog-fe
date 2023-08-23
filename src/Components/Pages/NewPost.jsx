@@ -24,7 +24,7 @@ export const NewPost = () => {
         fileData.append('cover', file)
 
         try {
-            const response = await fetch( `${REACT_APP_SERVER_BASE_URL}/posts/cloudUpload`,
+            const response = await fetch( `${process.env.REACT_APP_SERVER_BASE_URL}/posts/cloudUpload`,
                 {
                     method: 'POST',
                     body: fileData,
@@ -61,7 +61,7 @@ export const NewPost = () => {
                     cover: uploadedFile.cover,
                 }
 
-                const response = await fetch( `${REACT_APP_SERVER_BASE_URL}/posts/create`,
+                const response = await fetch( `${process.env.REACT_APP_SERVER_BASE_URL}/posts/create`,
                     {
                         method: 'POST',
                         headers: {

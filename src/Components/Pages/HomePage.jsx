@@ -8,7 +8,7 @@ function HomePage() {
 
     const getPostsApi = async () => {
         try {
-            const data = await fetch(`${REACT_APP_SERVER_BASE_URL}/posts`)
+            const data = await fetch(`${process.env.REACT_APP_SERVER_BASE_URL}/posts`)
 
             const response = await data.json()
 

@@ -21,7 +21,7 @@ const Login = () => {
     }
     // Funziona
     const handleLoginWithGithub = () => {
-        window.location.href = `${REACT_APP_SERVER_BASE_URL}/auth/github`
+        window.location.href = `${process.env.REACT_APP_SERVER_BASE_URL}/auth/github`
     }
 
     if (isLoggedIn) {

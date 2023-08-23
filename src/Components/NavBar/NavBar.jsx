@@ -33,7 +33,7 @@ const NavBar = ({ HomePage }) => {
         e.preventDefault()
 
         try {
-            const response = await fetch(`${REACT_APP_SERVER_BASE_URL}/login`, {
+            const response = await fetch(`${process.env.REACT_APP_SERVER_BASE_URL}/login`, {
                 method: 'POST',
                 body: JSON.stringify(formData),
                 headers: { 
